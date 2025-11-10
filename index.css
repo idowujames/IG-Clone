@@ -1,4 +1,4 @@
-html, body {
+html, body,p {
     margin: 0;
     padding: 0;
 }
@@ -9,21 +9,39 @@ body{
     font-family: "Source Sans 3", sans-serif;
     font-size: 13px;
     color: #000;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
 
 }
 
 .container{
     width: 375px;
-    background-color: #fff;
-    margin: 0px auto;
+    /* margin: 0px auto; */
 }
 
 header{
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
     padding: 17px 15px;
     border-bottom: 1px solid #C6C6C6;
 }
+
+main{
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
 
 .logo{
     width: 127px;
@@ -41,14 +59,11 @@ header{
 }
 
 .post-header .avatar{
-    padding: 10px;
+    padding: 12px 10px 12px 12px;
 }
 
-h1{
-    margin: 0;
-    font-size: 13px;
-    padding-top: 10px;
-    font-weight: 700;
+.post-header h1{
+   padding-top: 14px;
 }
 
 .post-header p{
@@ -59,5 +74,33 @@ h1{
 
 .post-image{
     width: 100%;
+}
+
+.content-align{
+    padding-left: 12px;
+}
+
+.icons{
+    width: 27px;
+}
+
+.post-icons{
+    /* margin-top: 21px; */
+    padding: 20px 17px 11px 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.likes{
+    padding: 0px 17px 12px 0px;
+}
+
+.comment-section{
+    display: flex;
+    padding-bottom: 16px;
+}
+
+.user-name{
+    padding-right: 5px;
 }
 
