@@ -3,3 +3,61 @@ html, body {
     padding: 0;
 }
 
+body{
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 13px;
+    color: #000;
+
+}
+
+.container{
+    width: 375px;
+    background-color: #fff;
+    margin: 0px auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 15px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.logo{
+    width: 127px;
+    height: 33px;
+}
+
+.avatar{
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+}
+
+.post-header{
+    display: flex;
+}
+
+.post-header .avatar{
+    padding: 10px;
+}
+
+h1{
+    margin: 0;
+    font-size: 13px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+.post-header p{
+    font-size: 12px;
+    margin: 0;
+    line-height: 1;
+}
+
+.post-image{
+    width: 100%;
+}
+
