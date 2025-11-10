@@ -1,11 +1,12 @@
-html, body,p {
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
     background-color: #f5f5f5;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-family: "Source Sans 3", sans-serif;
     font-size: 13px;
     color: #000;
@@ -18,7 +19,6 @@ body{
 
 .container{
     width: 375px;
-    /* margin: 0px auto; */
 }
 
 header{
@@ -29,19 +29,6 @@ header{
     border-bottom: 1px solid #C6C6C6;
 }
 
-main{
-    background-color: #fff;
-    margin-bottom: 30px;
-}
-
-h1, h2, h3{
-    margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-
 
 .logo{
     width: 127px;
@@ -51,48 +38,74 @@ h1, h2, h3{
 .avatar{
     width: 34px;
     height: 34px;
-    border-radius: 50px;
+    border-radius: 50%;
+}
+
+article{
+    background-color: #fff;
+    margin-bottom: 30px;
 }
 
 .post-header{
     display: flex;
+    align-items: center;
+    padding: 12px;
 }
 
 .post-header .avatar{
-    padding: 12px 10px 12px 12px;
+    margin-right: 8px;
 }
 
-.post-header h1{
-   padding-top: 14px;
+.post-user-info{
+    padding-top: 5px;
 }
 
-.post-header p{
+.post-user-name{
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.post-user-location{
     font-size: 12px;
-    margin: 0;
-    line-height: 1;
 }
 
 .post-image{
     width: 100%;
 }
 
-.content-align{
-    padding-left: 12px;
+.post-content{
+    padding: 0 12px;
+}
+
+.post-icons{
+    padding-top: 20px;
+    padding-bottom: 11px;
+    display: flex;
+    gap: 15px;
 }
 
 .icons{
     width: 27px;
+    height: 27px;
 }
 
-.post-icons{
-    /* margin-top: 21px; */
-    padding: 20px 17px 11px 0px;
-    display: flex;
-    gap: 10px;
+.icon-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
 }
 
-.likes{
-    padding: 0px 17px 12px 0px;
+.icon-btn:hover,
+.icon-btn:focus{
+    opacity: 0.6;
+}
+
+
+.likes-count{
+    font-weight: 700;
+    padding-bottom: 11px;
 }
 
 .comment-section{
@@ -100,7 +113,8 @@ h1, h2, h3{
     padding-bottom: 16px;
 }
 
-.user-name{
+.comment-user-name{
     padding-right: 5px;
+    font-weight: 700;
 }
 
