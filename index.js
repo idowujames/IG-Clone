@@ -6,7 +6,7 @@ const posts = [
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 21492
     },
     {
         name: "Gustave Courbet",
@@ -47,8 +47,8 @@ for (let i = 0; i < posts.length; i++){
     const postImg = postClone.querySelector(".post-image")
 
     const likeCount = postClone.querySelector(".likes-count")
-    const comments = postClone.querySelector(".comment-section")
     const commentUserName = postClone.querySelector(".comment-user-name")
+    const commentText = postClone.querySelector(".comment-text")
 
 
     // Setting the content using our data
@@ -59,12 +59,13 @@ for (let i = 0; i < posts.length; i++){
     postUserLocation.textContent = postData.location
 
     postImg.src = postData.post
+    postImg.alt = `Post by ${postData.name}`
 
-    likeCount.textContent = `${postData.likes} likes`
+    likeCount.textContent = `${postData.likes.toLocaleString()} likes`
     commentUserName.textContent = postData.username
-    comments.innerHTML = `${commentUserName.outerHTML}${postData.comment}`
+    commentText.textContent = postData.comment
 
-    // Filling-in the posts to the page
+    // Append posts to container
     postListContainer.appendChild(postClone)
 
 }
