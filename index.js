@@ -28,3 +28,45 @@ const posts = [
     }
 ]
 
+
+const template = document.getElementById("post-template")
+const postListContainer = document.getElementById("post-list")
+
+for (let i = 0; i < posts.length; i++){
+
+    const postData = posts[i]
+
+    // Making a copy of the template's content
+    const postClone = template.content.cloneNode(true)
+
+    // Filling in the blanks on the new copy
+    const avatarImg = postClone.querySelector(".avatar")
+    const postUserName = postClone.querySelector(".post-user-name")
+    const postUserLocation = postClone.querySelector(".post-user-location")
+
+    const postImg = postClone.querySelector(".post-image")
+
+    const likeCount = postClone.querySelector(".likes-count")
+    const comments = postClone.querySelector(".comment-section")
+    const commentUserName = postClone.querySelector(".comment-user-name")
+
+
+    // Setting the content using our data
+    avatarImg.src = postData.avatar
+    avatarImg.alt = `Avatar of ${postData.name}`
+
+    postUserName.textContent = postData.name
+    postUserLocation.textContent = postData.location
+
+    postImg.src = postData.post
+
+    likeCount.textContent = `${postData.likes} likes`
+    commentUserName.textContent = postData.username
+    comments.innerHTML = `${commentUserName.outerHTML}${postData.comment}`
+
+    // Filling-in the posts to the page
+    postListContainer.appendChild(postClone)
+
+}
+
+
